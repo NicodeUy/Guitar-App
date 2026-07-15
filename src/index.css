@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@keyframes string-vibration {
+  0% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0.95;
+  }
+  25% {
+    transform: translateY(-1px) scaleY(1.002);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(1px) scaleY(0.998);
+    opacity: 0.98;
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+  }
+}
+
+.string-vibrate .string-line {
+  animation: string-vibration 180ms ease-out;
+  will-change: transform, opacity;
+}
