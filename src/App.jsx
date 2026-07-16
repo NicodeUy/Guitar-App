@@ -2326,7 +2326,7 @@ function getFretLimitsForActiveCagedBox(boxIndex = activeCagedBoxIndex) {
                     background:
                       "linear-gradient(to right, #1a0f07, #28170c, #1a0f07)",
                   }}
-                  className="relative rounded-lg pr-1 min-h-65 flex flex-col justify-between border-y border-bs-white-950 py-1"
+                  className="relative rounded-lg pr-1 min-h-65 flex flex-col justify-between border-y border--950 py-1"
                 >
                   {/* Líneas Guías / Inlays del mástil en trastes 3, 5, 7, 9, 12 */}
                   {[3, 5, 7, 9].map((fret) => (
@@ -2417,7 +2417,7 @@ function getFretLimitsForActiveCagedBox(boxIndex = activeCagedBoxIndex) {
                                   );
                                 }}
                                 style={{ width: "7.8%" }}
-                                className={`h-full flex items-center justify-center cursor-pointer border-r border-zinc-800/80 transition-all ${
+                                className={`h-full flex items-center justify-center cursor-pointer border-r border-b-gray-800/80 transition-all ${
                                   isFretFocused
                                     ? "bg-rose-500/5 hover:bg-rose-500/10"
                                     : "hover:bg-zinc-800/30"

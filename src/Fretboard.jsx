@@ -102,7 +102,7 @@ export default function Fretboard({
               minWidth: "850px",
               background: "linear-gradient(to right, #1a0f07, #28170c, #1a0f07)"
             }}
-            className="relative rounded-lg pr-1 min-h-65 flex flex-col justify-between border-y border-zinc-950 py-1"
+            className="relative rounded-lg pr-1 min-h-65 flex flex-col justify-between border-y border-white-950 py-1"
           >
             {/* Separadores de trastes */}
             <div className="absolute inset-y-0 left-0 right-0 pointer-events-none z-10">
@@ -197,7 +197,7 @@ export default function Fretboard({
               minWidth: "850px",
               gridTemplateColumns: "minmax(0, 10%) repeat(12, minmax(0, 1fr))"
             }}
-            className="grid w-full text-center text-zinc-500 text-[10px] font-black tracking-wider pt-3 border-t border-zinc-800/50"
+            className="grid w-full text-center text-red-500 text-[10px] font-black tracking-wider pt-3 border-t border-zinc-800/50"
           >
             <div className="shrink-0">Aire</div>
             {Array.from({ length: 12 }, (_, i) => i + 1).map((fret) => (
