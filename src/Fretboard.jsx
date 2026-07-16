@@ -104,6 +104,21 @@ export default function Fretboard({
             }}
             className="relative rounded-lg pr-1 min-h-65 flex flex-col justify-between border-y border-zinc-950 py-1"
           >
+            {/* Separadores de trastes */}
+            <div className="absolute inset-y-0 left-0 right-0 pointer-events-none z-10">
+              <div
+                className="absolute inset-y-0 w-7px rounded-full bg-linear-to-b from-[#fff8de] via-[#e8cf87] to-[#8f6b24] shadow-[0_0_0_2px_rgba(255,255,255,0.5),0_0_16px_rgba(232,207,135,0.6)]"
+                style={{ left: "calc(6% - 3px)" }}
+              />
+              {Array.from({ length: 12 }, (_, i) => i + 1).map((fret) => (
+                <div
+                  key={fret}
+                  className="absolute inset-y-0 w-1.25 rounded-full bg-linear-to-b from-[#f2f2f2] via-[#8c8c8c] to-[#2f2f2f] shadow-[0_0_0_2px_rgba(255,255,255,0.18),0_0_10px_rgba(120,120,120,0.35)]"
+                  style={{ left: `calc(${fret} * 7% + 3.5%)` }}
+                />
+              ))}
+            </div>
+
             {/* Marcadores de Nácar tradicionales */}
             {[3, 5, 7, 9].map((fret) => (
               <div
@@ -149,7 +164,7 @@ export default function Fretboard({
                   {/* Traste Abierto (Open String / Nut) */}
                   <div
                     onClick={() => onNotePlay(stringObj.midi, 0, stringIdx)}
-                    className="h-full flex items-center justify-center cursor-pointer hover:bg-zinc-800/40 border-r-4 border-zinc-950 z-20"
+                    className="h-full flex items-center justify-center cursor-pointer hover:bg-zinc-800/40 border-r-[7px] border-[#d8c08a] bg-[linear-gradient(90deg,rgba(255,248,220,0.24),rgba(216,192,138,0.22))] z-20 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.2)]"
                   >
                     {renderNoteDot(stringIdx, 0, stringObj.midi)}
                   </div>
@@ -163,7 +178,7 @@ export default function Fretboard({
                       <div
                         key={fret}
                         onClick={() => onNotePlay(stringObj.midi + fret, fret, stringIdx)}
-                        className={`h-full flex items-center justify-center cursor-pointer border-r border-zinc-800/80 transition-all ${
+                        className={`h-full flex items-center justify-center cursor-pointer border-r-[5px] border-zinc-700/90 transition-all relative z-20 ${
                           isFretFocused ? "bg-rose-500/5 hover:bg-rose-500/10" : "hover:bg-zinc-800/30"
                         }`}
                       >
@@ -180,7 +195,7 @@ export default function Fretboard({
           <div
             style={{
               minWidth: "850px",
-              gridTemplateColumns: "minmax(0, 6%) repeat(12, minmax(0, 1fr))"
+              gridTemplateColumns: "minmax(0, 10%) repeat(12, minmax(0, 1fr))"
             }}
             className="grid w-full text-center text-zinc-500 text-[10px] font-black tracking-wider pt-3 border-t border-zinc-800/50"
           >
