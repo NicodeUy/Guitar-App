@@ -318,7 +318,7 @@ export default function App() {
   const [isStringsInverted, setIsStringsInverted] = useState(
     persistedState.isStringsInverted ?? false,
   );
-  const [gameMode, setGameMode] = useState(persistedState.gameMode ?? "free");
+  const [gameMode, setGameMode] = useState("free");
   const [freeRevealActive, setFreeRevealActive] = useState(false);
   const [labelMode, setLabelMode] = useState(persistedState.labelMode ?? "names");
   const [isCompactActive, setIsCompactActive] = useState(
