@@ -2385,7 +2385,7 @@ function getFretLimitsForActiveCagedBox(boxIndex = activeCagedBoxIndex) {
                               stringObj.midi,
                             );
                           }}
-                          className="w-[6%] h-full flex items-center justify-center cursor-pointer hover:bg-zinc-800/40 border-r-4 border-white-950 z-20"
+                          className="w-[6%] h-11 flex items-center justify-center cursor-pointer hover:bg-zinc-800/40 border-r-4 border-be-zinc-700 z-20"
                         >
                           {renderNoteDot(stringIdx, 0, stringObj.midi)}
                         </div>
@@ -2417,7 +2417,7 @@ function getFretLimitsForActiveCagedBox(boxIndex = activeCagedBoxIndex) {
                                   );
                                 }}
                                 style={{ width: "7.8%" }}
-                                className={`h-full flex items-center justify-center cursor-pointer border-r border-b-gray-800/80 transition-all ${
+                                className={`h-11 flex items-center justify-center cursor-pointer border-r border-b-gray-800/80 transition-all ${
                                   isFretFocused
                                     ? "bg-rose-500/5 hover:bg-rose-500/10"
                                     : "hover:bg-zinc-800/30"
